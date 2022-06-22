@@ -6,7 +6,7 @@ import {observer} from "mobx-react";
 
 const Container = styled.div`
   position: relative;
-  background-color: cyan;
+  background-color: #D2EAD2;
 
   svg path:hover {
     fill: blueviolet;
@@ -15,18 +15,23 @@ const Container = styled.div`
 
 const PopupContainer = styled.div`
   position: absolute;
-  bottom: 10%;
-  right: 10%;
-  padding: 16px;
-  background-color: red;
+  width: 90vw;
+  height: 135vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: rgba(255, 255, 255, 1) 0px 0px 15px;
+  border-style: solid;
+  border-width: 2px;
 `
 
 const CloseIconContainer = styled.div`
-  background-color: blue;
-  width: 120px;
-  height: 120px;
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
 
   svg {
     fill: fuchsia;
@@ -38,15 +43,77 @@ const CloseIconContainer = styled.div`
     }
   }
 `
+const Box1 = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 5px 10px;
+`
+const Box2 = styled.div`
+  width: 100%;
+  display: flex;
+  height: 65%;
+  justify-content: center;
+`
+const Box3 = styled.div`
+  width: 100%;
+  display: flex;
+  height: 15%;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  padding: 0px 0px 0px 15px;
+`
+const TitleBox = styled.div`
+  width: 100%;
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  padding-top: 20px;
+`
+const Margin0 = styled.p`
+  margin: 0;
+  font-family: "LeeSeoyun", sans-serif;
+`
+const Chart = styled.img`
+  display: block;
+  max-width: 95%;
+  max-height: 65%;
+  position: absolute;
+  bottom: 5px;
+`
+const Button = styled.button`
+  font-family: "LeeSeoyun", sans-serif;
+  font-size: 15px;
+`
+const Title = styled.h2`
+  font-family: "NanumSquareRound", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0px;
+`
 
 const Popup = observer(({onClickClose}) => {
   const data = mapStore.currentData
   return <PopupContainer>
     <CloseIconContainer onClick={onClickClose}>
-      <ReactSVG src='img/close-icon.svg'/>
+      <Box1>
+        <Margin0>울산광역시</Margin0> 
+        <ReactSVG src='img/1544641784.svg'/>
+      </Box1>
+      <Box3>
+        <Button>#현수막</Button>
+        <Button>#종이_홍보물</Button>  
+        <Button>#명함</Button> 
+        <Button>#유세차량</Button>
+        <Button>#선거복</Button>
+      </Box3>
+      <TitleBox>
+        <Title style={{color: '#1E9248'}}>종이 홍보물</Title><Title>의 CO2 환산량은?</Title>
+      </TitleBox>
+      <Box2>
+        <Chart src="img/test4.png" alt="" />
+      </Box2>
     </CloseIconContainer>
-    이름: {data?.name}<br/>
-    어떤값: {data?.someValue}
   </PopupContainer>
 })
 

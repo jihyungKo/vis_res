@@ -1,8 +1,10 @@
 (() => {
   const stepElems = document.querySelectorAll('.step');
   const graphicElems = document.querySelectorAll('.graphic-item');
+  const candidate1 = document.getElementById('candidate1');
   let currentItem = graphicElems[0];
   let ioIndex;
+  let can1Index = 0;
 
   const io = new IntersectionObserver((entries, observer) => {
     ioIndex = entries[0].target.dataset.index * 1;
@@ -13,6 +15,15 @@
     stepElems[i].dataset.index = i;
     graphicElems[i].dataset.index = i;
   }
+
+  candidate1.addEventListener('click', function() {
+    can1Index++
+    if (can1Index%2 == 1) {
+      document.getElementById('candidate1').setAttribute("src", "img/candidate4.png")
+    } else {
+      document.getElementById('candidate1').setAttribute("src", "img/candidate1.png")
+    }
+  })
 
   function activate() {
     currentItem.classList.add('visible');

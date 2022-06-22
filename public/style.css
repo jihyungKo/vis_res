@@ -1,22 +1,55 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-::-webkit-scrollbar {
-    width: 0px;
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 300; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumSquareRoundL.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 400; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumSquareRoundR.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 500; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumSquareRoundB.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 700; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumSquareRoundEB.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body, div, section, article, header, footer {
-
     color: rgb(58, 58, 58);
     margin: 0;
     padding: 0;
 
     box-sizing: border-box;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "NanumSquareRound", sans-serif;
     text-align: center;
+}
+
+body {
+    background-color: #D2EAD2;
 }
 
 a {
     color: rgb(58, 58, 58);
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 2px solid #2c2c2c;
     text-decoration: none;
 }
@@ -39,7 +72,7 @@ a:active {
 
 a.blackbg {
     color: black;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 2px solid black;
     text-decoration: none;
 }
@@ -71,7 +104,7 @@ h1, h2, h3, p {
 }
 
 h2 {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "NanumSquareRound", sans-serif;
     font-size: 21px;
     font-weight: 700;
     line-height: 140%;
@@ -88,14 +121,18 @@ p {
 }
 
 strong {
-    font-weight: 600;
+    font-weight: 500;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* HEADER */
 .header {
     width: 100%;
     height: 50px;
-
 
     z-index: 1000;
     position: fixed;
@@ -106,20 +143,16 @@ strong {
     padding: 10px 0;
 
     transition: 1s;
-}
 
-.headtoBlack {
-    color: white;
-    font-weight: 400;
-    background-color: rgba(36, 36, 36, 1);;
-    box-shadow: rgba(36, 36, 36, 1) 0px 0px 15px;
-}
-.headtoWhite {
     color: black;
-    font-weight: 600;
-    background-color: white;
-    box-shadow: rgba(255, 255, 255, 1) 0px 0px 15px;
+    font-weight: 700;
+    background-color: #D2EAD2;
+}
 
+.header span {
+    display: inline-block;
+    text-align: center;
+    line-height: 31.6px;
 }
 
 /* Article */
@@ -132,6 +165,7 @@ strong {
     top: 0;
     height: 100vh;
 }
+
 .graphic-item {
     display: flex;
     align-items: center;
@@ -144,9 +178,20 @@ strong {
     transition: 1s;
     will-change: opacity;
 }
+
+.wall {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
 .visible {
     opacity: 1;
 }
+
 .scene-img {
     height: 90vh;
     background-position: center top;
@@ -169,6 +214,7 @@ strong {
     position: relative;
     padding-bottom: 1px;
 }
+
 .step {
     width: 380px;
     margin: 0 auto 80vh auto;
@@ -219,6 +265,11 @@ strong {
 
 }
 
+.candidate {
+    width: 30%;
+    margin: 0 auto;
+}
+
 /* Intro */
 
 .intro{
@@ -232,7 +283,7 @@ strong {
     margin: 10px 0;
     font-size: 50px;
     line-height: 120%;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .intro p {
@@ -265,13 +316,13 @@ strong {
 }
 
 .highlight {
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 2px dotted #2c2c2c;
 }
 
 .highlightB {
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 2px dotted white;
 }
 
@@ -287,7 +338,7 @@ strong {
     margin: 10px 0;
     font-size: 38px;
     line-height: 120%;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .toBlack {
@@ -302,7 +353,7 @@ strong {
 /* Credit */
 .credit {
     margin: 50px auto 10px auto;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
 }
 
@@ -333,7 +384,7 @@ strong {
         margin: 10px 0;
         font-size: 40px;
         line-height: 120%;
-        font-weight: 800;
+        font-weight: 700;
     }
 
     .text {
@@ -371,4 +422,8 @@ strong {
         width: 100%;
     }
 
+}
+
+#react-map svg path:hover {
+    fill: yellow;
 }

@@ -8,12 +8,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <title>유기동물에 관한 슬픈 보고서</title>
+  <title>지방선거에 관한 슬픈 보고서</title>
 </head>
 <body id="bg">
-<header id="header" class="header headtoWhite">
-  <span>유기동물에 관한 슬픈 보고서 </span>
-</header>
+<div class="header">
+  <span>지방선거에 관한 슬픈 보고서</span>
+</div>
 <main>
   <article>
     <section class="scroll-content">
@@ -27,7 +27,7 @@
       <div class="scroll-text global-width">
         <div class="step">
           <p class="center">
-            당신은 반려동물과 <br> 함께하나요?
+            안녕하세요? <br> 비주얼라이제이션 수강생, 쌈D입니다.
           </p>
         </div>
         <div class="step">
@@ -59,37 +59,27 @@
     </section>
 
     <section class="standar">
+      <div id="react-map"></div>
+    </section>
+
+    <section class="standar">
       <div class="text">
-        <p>1978년 10월 15일, 프랑스 파리 유네스코 본부에서 선포된 세계 동물권리 선언의 제1조는 “모든 동물은 태어나면서부터 평등한 생명권과 존재할 권리를 가진다.”입니다. 세계 인권선언 이후 30년 만에 동물권 선언이 나온 거죠. 그로부터 10여 년 뒤인 1991년, 한국에서는 동물보호법이 처음으로 만들어졌습니다. 이제는 단지 동물 보호를 넘어, 함께 살아가는 반려동물이 보편화하고 있어요. 최근 조사에 따르면 국민 4명 중 1명은 반려동물을 키우고 있고 그 비율은 꾸준히 증가하고 있죠. 그러나 또 한편으로, 버려지는 동물의 수 역시 가파르게 늘어나고 있습니다.
-
-        </p>
-        <p>SBS 데이터저널리즘팀 [마부작침]은, 3년 전 <a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1004414516" target="_blank">'유기동물을 부탁해'</a>  시리즈에서 버려지는 동물의 실태를 데이터에 기반해 종합 분석, 보도한 바 있습니다. 2020년 지금은, 당시의 문제의식을 좀 더 확장해 최근 10년을 진단하고, 더 늦기 전에 우리가 해야 할 일이 무엇일지 모색해보려 합니다.
-        </p>
-
-        <h2>우리는 지난 10년 간<br>95만 마리를 버렸다
+        <h2>친환경 공약을 내세운<br>후보자들을 살펴보자
         </h2>
         <p>많이 키우는 만큼 많이 버리는 걸까요. 농림부가 운영하는 <a href="https://www.animal.go.kr/front/index.do" target="_blank">'동물보호관리시스템'</a>에 등록된 유실·유기동물 자료를 분석해보니 지난 10년 간 우리가 버린 것으로 공식 등록된 동물은 <strong class="highlight">94만 7,098마리</strong>였습니다. 2014년부터 현재까진 줄곧 오름세입니다. 유기동물을 줄이기 위한 동물등록제가 2014년 첫 시행됐다는 점을 보면 역설적인 상황이죠. 2019년엔 유기동물 13만 3,515마리가 등록돼 역대 최대 규모를 기록했어요. 올 들어서도 9월까지 10만 마리를 넘어 최다 발생 기록을 갈아 치울 기세입니다. 10년 간 발생한 유기동물을 일수로 나누면 하루 평균 247마리 꼴인데, 2019년만 보면 일평균 365마리. 올해는 9월까지 일평균 372마리를 버렸습니다.
         </p>
-
-      </div>
-      <div style="position: relative;">
-
-        <div class="cliff-img" style="background-image: url('./img/cliff.png');"></div>
-        <div class="floatText pos1" >
-          유기된 개는 67만 6,391마리 <br>
-          전체의 71.4%로 가장 많았습니다.
-        </div>
-        <div class="floatText pos2">
-          다음은 고양이로 25만 9,203마리(27.4%)입니다.
-        </div>
-        <div class="floatText pos3">
-          이 둘을 합하면 98.8%에 이릅니다.
-        </div>
-        <div class="floatText pos4" >
-          나머지 기타 축종은<br> 1만 1,504마리, 1.2%였습니다.
-        </div>
       </div>
 
+      <div class="wall">
+        <img class="candidate" src="img/candidate1.png" alt="" id="candidate1">
+        <img class="candidate" src="img/candidate2.png" alt="">
+        <img class="candidate" src="img/candidate3.png" alt="">
+      </div>
+      <div class="wall">
+        <img class="candidate" src="img/candidate4.png" alt="" id="candidate1">
+        <img class="candidate" src="img/candidate5.png" alt="">
+        <img class="candidate" src="img/candidate6.png" alt="">
+      </div>
 
       <div class="text">
         <h2 style="margin-top: 30px;">어릴수록 많이 버린다? <br>집 근처에 주로 버린다?</h2>
@@ -115,12 +105,6 @@
         </p>
       </div>
 
-
-
-    </section>
-
-    <section class="standar">
-      <div id="react-map"></div>
     </section>
 
     <section class="scroll-content">
@@ -161,26 +145,7 @@
     </section>
 
     <section class="standar">
-      <div id="react-stuff"></div>
-    </section>
-
-    <section class="standar">
       <div class="text">
-
-
-        <!-- 관련기사 -->
-        <div>
-          <p class="credit">
-            관련기사
-          </p>
-          <div class="articleList">
-            <a class="blackbg" href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006043845" target="blank">2020 유기동물을 부탁해 - ① 우리가 버린 95만 '아이'들</a> <br>
-            <a class="blackbg"  href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006044695" target="blank">2020 유기동물을 부탁해 - ② 절반은 죽는다… 보호센터에선 무슨 일이? </a> <br>
-            <a class="blackbg" href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006048285" target="blank">2020 유기동물을 부탁해 - ③ '뉴스'가 된 개 물림 사고… 매년 2천 명 다친다</a> <br>
-            <a class="blackbg"  href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006044994" target="blank">2020 유기동물을 부탁해 - ④ 유기·애완을 넘어 '반려'동물하려면</a> <br>
-            <a class="blackbg" href="https://news.sbs.co.kr/news/endPage.do?news_id=N1006050736" target="blank">[마침] 2020 유기동물을 부탁해!</a>
-          </div>
-        </div>
         <!-- 크레딧 -->
         <div>
           <p class="credit">
@@ -188,7 +153,7 @@
           </p>
 
           <div class="creditList">
-            데이터저널리즘팀 마부작침  <br><br>
+            비주얼라이제이션 쌈D팀  <br><br>
             심영구 기자 <br>
             배정훈 기자 <br>
             배여운 기자·분석가 <br>
@@ -196,7 +161,7 @@
 
           </div>
           <div class="creditList">
-            <strong class="highlight">sbsdjmb@gmail.com</strong>
+
             <br><br>
             안준석 디자이너 <br>
             김지연 인턴 <br>
