@@ -9,7 +9,7 @@ const Container = styled.div`
   background-color: #D2EAD2;
 
   svg path:hover {
-    fill: blueviolet;
+    fill: #D2EAD2;
   }
 `
 
@@ -91,40 +91,88 @@ const Title = styled.h2`
   font-weight: 700;
   margin: 0px;
 `
+const Small2 = styled.h2`
+  font-family: "NanumSquareRound", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0px;
+  display: inline;
+`
 
 const Popup = observer(({onClickClose}) => {
   const data = mapStore.currentData
+	const handleChange = async (event) => {
+    document.getElementById('bar-chart').setAttribute("src", data[event.target.id])
+    if (event.target.id !== 'total') {
+      document.getElementById('title-front').innerText = event.target.value
+      document.getElementById('title-back1').style.display = "block"
+      document.getElementById('title-back2').style.display = "none"
+    } else {
+      document.getElementById('title-front').innerText = null
+      document.getElementById('title-back1').style.display = "none"
+      document.getElementById('title-back2').style.display = "block"
+    }
+	}
   return <PopupContainer>
-    <CloseIconContainer onClick={onClickClose}>
-      <Box1>
-        <Margin0>울산광역시</Margin0> 
+    <CloseIconContainer>
+      <Box1 onClick={onClickClose}>
+        <Margin0>{data?.name}</Margin0> 
         <ReactSVG src='img/1544641784.svg'/>
       </Box1>
       <Box3>
-        <Button>#현수막</Button>
-        <Button>#종이_홍보물</Button>  
-        <Button>#명함</Button> 
-        <Button>#유세차량</Button>
-        <Button>#선거복</Button>
+        <Button value={'현수막'} id={'banner'} onClick={handleChange}>#현수막</Button>
+        <Button value={'종이 홍보물'} id={'paper'} onClick={handleChange}>#종이_홍보물</Button>  
+        <Button value={'명함'} id={'card'} onClick={handleChange}>#명함</Button> 
+        <Button value={'유세차량'} id={'truck'} onClick={handleChange}>#유세차량</Button>
+        <Button value={'선거복'} id={'clothes'} onClick={handleChange}>#선거복</Button>
+        <Button id={'total'} onClick={handleChange}>#전체</Button>
       </Box3>
       <TitleBox>
-        <Title style={{color: '#1E9248'}}>종이 홍보물</Title><Title>의 CO2 환산량은?</Title>
+        <Title id={'title-front'} style={{color: '#1E9248'}}></Title><Title id={'title-back1'} style={{display: 'none'}}>의 CO<Small2>2</Small2> 환산량은?</Title><Title id={'title-back2'}>어떤 후보가 CO<Small2>2</Small2>를 많이 배출했을까?</Title>
       </TitleBox>
       <Box2>
-        <Chart src="img/test4.png" alt="" />
+        <Chart id={'bar-chart'} src={data?.total} alt="" />
       </Box2>
     </CloseIconContainer>
   </PopupContainer>
 })
 
 const data = {
-  1: {
-    'name': '머시기',
-    'someValue': 1,
+  incheon: {
+    'name': '인천광역시',
+    'total': 'img/인천_총탄소배출량.png',
+    'banner': 'img/인천_현수막.png',
+    'paper': 'img/인천_종이홍보물.png',
+    'card': 'img/인천_명함.png',
+    'truck': 'img/인천_유세차량.png',
+    'clothes': 'img/인천_의류.png',
   },
-  2: {
-    'name': '머시기2',
-    'someValue': 2,
+  daejeon: {
+    'name': '대전광역시',
+    'total': 'img/대전_총탄소배출량.png',
+    'banner': 'img/대전_현수막.png',
+    'paper': 'img/대전_종이홍보물.png',
+    'card': 'img/대전_명함.png',
+    'truck': 'img/대전_유세차량.png',
+    'clothes': 'img/대전_의류.png',
+  },
+  ulsan: {
+    'name': '울산광역시',
+    'total': 'img/울산_총탄소배출량.png',
+    'banner': 'img/울산_현수막.png',
+    'paper': 'img/울산_종이홍보물.png',
+    'card': 'img/울산_명함.png',
+    'truck': 'img/울산_유세차량.png',
+    'clothes': 'img/울산_의류.png',
+  },
+  gangwon: {
+    'name': '강원도',
+    'total': 'img/강원_총탄소배출량.png',
+    'banner': 'img/강원_현수막.png',
+    'paper': 'img/강원_종이홍보물.png',
+    'card': 'img/강원_명함.png',
+    'truck': 'img/강원_유세차량.png',
+    'clothes': 'img/강원_의류.png',
   }
 }
 

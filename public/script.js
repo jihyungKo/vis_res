@@ -19,7 +19,7 @@
   candidate1.addEventListener('click', function() {
     can1Index++
     if (can1Index%2 == 1) {
-      document.getElementById('candidate1').setAttribute("src", "img/candidate4.png")
+      document.getElementById('candidate1').setAttribute("src", "img/candidate1.png")
     } else {
       document.getElementById('candidate1').setAttribute("src", "img/candidate1.png")
     }
