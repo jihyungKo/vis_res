@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/vis_res/static/js/main.d4180bb1.js",
+    "main.js": "/vis_res/static/js/main.38c8831e.js",
     "index.html": "/vis_res/index.html",
-    "main.d4180bb1.js.map": "/vis_res/static/js/main.d4180bb1.js.map"
+    "main.38c8831e.js.map": "/vis_res/static/js/main.38c8831e.js.map"
   },
   "entrypoints": [
-    "static/js/main.d4180bb1.js"
+    "static/js/main.38c8831e.js"
   ]
 }

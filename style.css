@@ -176,15 +176,12 @@ table {
     width: 90%;
     opacity: 0;
     transition: 1s;
-    will-change: opacity;
 }
 
 .wall {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-bottom: 10px;
 }
 
@@ -197,6 +194,14 @@ table {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.radar-chart-img {
+    width: 90vw;
+}
+
+.pie-chart-img {
+    width: 75vw;
 }
 
 .cliff-img {
@@ -358,10 +363,18 @@ table {
 }
 
 .creditList {
-    margin: 10px auto 100px auto;
+    margin: 10px auto 50px auto;
     text-align: left;
     width: 50%;
     float: left;
+    line-height: 22px;
+}
+
+.tooltip {
+    text-align: center;
+    font-family: 'LeeSeoyun';
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .articleList {
