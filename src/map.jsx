@@ -61,7 +61,7 @@ const Box3 = styled.div`
   height: 15%;
   flex-wrap: wrap;
   gap: 10px 15px;
-  padding: 0px 0px 0px 15px;
+  padding: 0px 15px 0px 15px;
 `
 const TitleBox = styled.div`
   width: 100%;
@@ -84,6 +84,10 @@ const Chart = styled.img`
 const Button = styled.button`
   font-family: "LeeSeoyun", sans-serif;
   font-size: 15px;
+  color: #000000;
+  border-width: 1.2px;
+  border-color: #333333;
+  border-radius: 3px;
 `
 const Title = styled.h2`
   font-family: "NanumSquareRound", sans-serif;
@@ -138,6 +142,24 @@ const Popup = observer(({onClickClose}) => {
 })
 
 const data = {
+  seoul: {
+    'name': '서울특별시',
+    'total': 'img/서울_총탄소배출량.png',
+    'banner': 'img/서울_현수막.png',
+    'paper': 'img/서울_종이홍보물.png',
+    'card': 'img/서울_명함.png',
+    'truck': 'img/서울_유세차량.png',
+    'clothes': 'img/서울_의류.png',
+  },
+  sejong: {
+    'name': '세종특별자치시',
+    'total': 'img/세종_총탄소배출량.png',
+    'banner': 'img/세종_현수막.png',
+    'paper': 'img/세종_종이홍보물.png',
+    'card': 'img/세종_명함.png',
+    'truck': 'img/세종_유세차량.png',
+    'clothes': 'img/세종_의류.png',
+  },
   incheon: {
     'name': '인천광역시',
     'total': 'img/인천_총탄소배출량.png',
@@ -156,6 +178,24 @@ const data = {
     'truck': 'img/대전_유세차량.png',
     'clothes': 'img/대전_의류.png',
   },
+  gwangju: {
+    'name': '광주광역시',
+    'total': 'img/광주_총탄소배출량.png',
+    'banner': 'img/광주_현수막.png',
+    'paper': 'img/광주_종이홍보물.png',
+    'card': 'img/광주_명함.png',
+    'truck': 'img/광주_유세차량.png',
+    'clothes': 'img/광주_의류.png',
+  },
+  daegu: {
+    'name': '대구광역시',
+    'total': 'img/대구_총탄소배출량.png',
+    'banner': 'img/대구_현수막.png',
+    'paper': 'img/대구_종이홍보물.png',
+    'card': 'img/대구_명함.png',
+    'truck': 'img/대구_유세차량.png',
+    'clothes': 'img/대구_의류.png',
+  },
   ulsan: {
     'name': '울산광역시',
     'total': 'img/울산_총탄소배출량.png',
@@ -165,6 +205,24 @@ const data = {
     'truck': 'img/울산_유세차량.png',
     'clothes': 'img/울산_의류.png',
   },
+  busan: {
+    'name': '부산광역시',
+    'total': 'img/부산_총탄소배출량.png',
+    'banner': 'img/부산_현수막.png',
+    'paper': 'img/부산_종이홍보물.png',
+    'card': 'img/부산_명함.png',
+    'truck': 'img/부산_유세차량.png',
+    'clothes': 'img/부산_의류.png',
+  },
+  gyeonggi: {
+    'name': '경기도',
+    'total': 'img/경기_총탄소배출량.png',
+    'banner': 'img/경기_현수막.png',
+    'paper': 'img/경기_종이홍보물.png',
+    'card': 'img/경기_명함.png',
+    'truck': 'img/경기_유세차량.png',
+    'clothes': 'img/경기_의류.png',
+  },
   gangwon: {
     'name': '강원도',
     'total': 'img/강원_총탄소배출량.png',
@@ -173,6 +231,69 @@ const data = {
     'card': 'img/강원_명함.png',
     'truck': 'img/강원_유세차량.png',
     'clothes': 'img/강원_의류.png',
+  },
+  chungbuk: {
+    'name': '충청북도',
+    'total': 'img/충북_총탄소배출량.png',
+    'banner': 'img/충북_현수막.png',
+    'paper': 'img/충북_종이홍보물.png',
+    'card': 'img/충북_명함.png',
+    'truck': 'img/충북_유세차량.png',
+    'clothes': 'img/충북_의류.png',
+  },
+  chungnam: {
+    'name': '충청남도',
+    'total': 'img/충남_총탄소배출량.png',
+    'banner': 'img/충남_현수막.png',
+    'paper': 'img/충남_종이홍보물.png',
+    'card': 'img/충남_명함.png',
+    'truck': 'img/충남_유세차량.png',
+    'clothes': 'img/충남_의류.png',
+  },
+  jeonbuk: {
+    'name': '전라북도',
+    'total': 'img/전북_총탄소배출량.png',
+    'banner': 'img/전북_현수막.png',
+    'paper': 'img/전북_종이홍보물.png',
+    'card': 'img/전북_명함.png',
+    'truck': 'img/전북_유세차량.png',
+    'clothes': 'img/전북_의류.png',
+  },
+  jeonnam: {
+    'name': '전라남도',
+    'total': 'img/전남_총탄소배출량.png',
+    'banner': 'img/전남_현수막.png',
+    'paper': 'img/전남_종이홍보물.png',
+    'card': 'img/전남_명함.png',
+    'truck': 'img/전남_유세차량.png',
+    'clothes': 'img/전남_의류.png',
+  },
+  gyeongbuk: {
+    'name': '경상북도',
+    'total': 'img/경북_총탄소배출량.png',
+    'banner': 'img/경북_현수막.png',
+    'paper': 'img/경북_종이홍보물.png',
+    'card': 'img/경북_명함.png',
+    'truck': 'img/경북_유세차량.png',
+    'clothes': 'img/경북_의류.png',
+  },
+  gyeongnam: {
+    'name': '경상남도',
+    'total': 'img/경남_총탄소배출량.png',
+    'banner': 'img/경남_현수막.png',
+    'paper': 'img/경남_종이홍보물.png',
+    'card': 'img/경남_명함.png',
+    'truck': 'img/경남_유세차량.png',
+    'clothes': 'img/경남_의류.png',
+  },
+  jeju: {
+    'name': '제주특별자치도',
+    'total': 'img/제주_총탄소배출량.png',
+    'banner': 'img/제주_현수막.png',
+    'paper': 'img/제주_종이홍보물.png',
+    'card': 'img/제주_명함.png',
+    'truck': 'img/제주_유세차량.png',
+    'clothes': 'img/제주_의류.png',
   }
 }
 
