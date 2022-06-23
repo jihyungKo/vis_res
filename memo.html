@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" type="text/css" href="./text.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <title>지방선거에 관한 슬픈 보고서</title>
+</head>
+<body id="bg">
+<div class="header">
+  <span>지방선거에 관한 슬픈 보고서</span>
+</div>
+<main>
+  <article>
+    <section class="scroll-content">
+      <div class="scroll-graphic">
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro1.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro2.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro3.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro3.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro4.png');"></div>
+      </div>
+      <div class="scroll-text global-width">
+        <div class="step">
+          <p class="center">
+            안녕하세요? <br> 비주얼라이제이션 수강생, 쌈D입니다.
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            매일 아침 반려동물과 <br> 산책하는 소소한 행복
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            반려인구 <strong class="highlight">1,500만</strong>  <br> 4가구 중 1가구는 반려동물을 키우는 시대
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            그리고
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            하루에 <br> <strong>372마리</strong>를 버리는 오늘
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h1 id="maintitle">유기동물에 관한<br>슬픈 보고서</h1>
+      <p>2020 유기동물을 부탁해</p>
+    </section>
+
+    <section class="standar">
+      <div id="react-map"></div>
+    </section>
+
+    <section class="standar">
+      <div class="text">
+        <h2>친환경 공약을 내세운<br>후보자들을 살펴보자
+        </h2>
+        <p>많이 키우는 만큼 많이 버리는 걸까요. 농림부가 운영하는 <a href="https://www.animal.go.kr/front/index.do" target="_blank">'동물보호관리시스템'</a>에 등록된 유실·유기동물 자료를 분석해보니 지난 10년 간 우리가 버린 것으로 공식 등록된 동물은 <strong class="highlight">94만 7,098마리</strong>였습니다. 2014년부터 현재까진 줄곧 오름세입니다. 유기동물을 줄이기 위한 동물등록제가 2014년 첫 시행됐다는 점을 보면 역설적인 상황이죠. 2019년엔 유기동물 13만 3,515마리가 등록돼 역대 최대 규모를 기록했어요. 올 들어서도 9월까지 10만 마리를 넘어 최다 발생 기록을 갈아 치울 기세입니다. 10년 간 발생한 유기동물을 일수로 나누면 하루 평균 247마리 꼴인데, 2019년만 보면 일평균 365마리. 올해는 9월까지 일평균 372마리를 버렸습니다.
+        </p>
+      </div>
+
+      <div class="wall">
+        <img class="candidate" src="img/candidate1.png" alt="" id="candidate1">
+        <img class="candidate" src="img/candidate2.png" alt="">
+        <img class="candidate" src="img/candidate3.png" alt="">
+      </div>
+      <div class="wall">
+        <img class="candidate" src="img/candidate4.png" alt="" id="candidate1">
+        <img class="candidate" src="img/candidate5.png" alt="">
+        <img class="candidate" src="img/candidate6.png" alt="">
+      </div>
+
+      <div class="text">
+        <h2 style="margin-top: 30px;">어릴수록 많이 버린다? <br>집 근처에 주로 버린다?</h2>
+        <p>큰 눈, 넓은 이마, 통통한 몸, 짧고 뭉툭한 주둥이... 포유류 새끼들이 공통으로 갖는 외양에 인간은 본능적으로 귀여움을 느낀다고 합니다. 강아지와 새끼 고양이를 갖고 싶고 보호하고 싶은 마음이 드는 것도 그래서일 테죠. 반려동물도 어릴수록 인기가 있습니다. 그러니 '나이 많은 동물이라 버렸겠지' 하고 짐작하는 게 자연스러울텐데 현실은 달랐습니다.
+        </p>
+        <p>
+          등록된 유기동물 94만 7천 마리 중에서 <strong class="highlight">생후 1년 미만으로 추정되는 아기 동물은 37만 2,506마리,</strong> 무려 전체의 39.3%를 차지했습니다. 10년 이상 고령은 3.3%로 비중이 크지 않았어요. 성장이 끝나기 전인 어린 동물들이 많이 버려지고 있는 건데 '역-고려장'이라 할 만할 정도죠.
+        </p>
+      </div>
+
+      <img class="graph2" src="img/graph2.png" alt="">
+
+      <div class="text">
+        <p>
+          그렇다면 유기동물은 어디에 가장 많이 버려질까요? 정확히 답하기 어렵지만 어디서 많이 발견되는지는 알 수 있습니다. 장소 정보가 등록된 유기동물 42만 마리의 키워드 분석을 통해 발견 장소를 정리해 봤습니다. 네 마리 중 한 마리 꼴, 총 10만 8,212마리는 아파트, 즉 주거지역 근처에서 발견됐습니다. 다음은 학교(9.0%), 시군구청(8.2%), 상업시설(7.4%) 순. 소방대원들에게 구조된 경우도 7.8%로 높은 편이었습니다다. 동물은 움직이고 이동하기에 이 발견 장소와 유기 지역이 꼭 일치하진 않을 겁니다. 원래 집을 찾아오지 못하도록 먼 곳에 버렸을 가능성도 있을거고요.
+        </p>
+
+        <h2>어떤 종류를 많이 버렸을까</h2>
+        <p>유기견 중 가장 많은 건 믹스견, 즉 잡종입니다. 34만 6,762마리로 전체 유기견의 51.3%, 절반이 넘었죠. 다음으로 많은 건 몰티즈 7만 2,333마리(10.7%)였고 푸들 5만 1,475마리(7.6%), 시츄 3만 8,472마리(5.7%) 순이었습니다. 유기묘 중에선 '알 수 없음'이 19만 595마리(73.5%)로 최다였고 한국고양이(코리안숏헤어)가 6만 3,932마리(24.7%)로 다음이었습니다. 그 외엔 페르시안 0.6%, 터키시 앙골라 0.3% 등으로 나머지는 1% 미만으로 분석됐습니다.
+        </p>
+        <p>
+          전체 반려동물 현황과는 다른 양상입니다. 2018년 실시된 '반려동물 인식 및 양육 현황 조사'에 따르면 반려동물로 키우는 개의 종류는 말티즈가 19.6%, 푸들 12.0%, 시츄 10.3%, 믹스견 8.6%, 요크셔테리어 6.0% 순으로 조사됐습니다. 고양이는 한국고양이 20.6%, 믹스묘 18.5%, 러시안블루 13.8%, 페르시안 9.0%, 샴 7.0% 순이었습니다.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="scroll-content">
+      <div class="scroll-graphic">
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro1.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro2.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro3.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro3.png');"></div>
+        <div class="graphic-item scene-img" style="background-image: url('./img/intro4.png');"></div>
+      </div>
+      <div class="scroll-text global-width">
+        <div class="step">
+          <p class="center">
+            당신은 반려동물과 <br> 함께하나요?
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            매일 아침 반려동물과 <br> 산책하는 소소한 행복
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            반려인구 <strong class="highlight">1,500만</strong>  <br> 4가구 중 1가구는 반려동물을 키우는 시대
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            그리고
+          </p>
+        </div>
+        <div class="step">
+          <p class="center">
+            하루에 <br> <strong>372마리</strong>를 버리는 오늘
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="standar">
+      <div class="text">
+        <!-- 크레딧 -->
+        <div>
+          <p class="credit">
+            만든이
+          </p>
+
+          <div class="creditList">
+            비주얼라이제이션 쌈D팀  <br><br>
+            심영구 기자 <br>
+            배정훈 기자 <br>
+            배여운 기자·분석가 <br>
+            안혜민 기자·분석가
+
+          </div>
+          <div class="creditList">
+
+            <br><br>
+            안준석 디자이너 <br>
+            김지연 인턴 <br>
+            이기은 인턴
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
